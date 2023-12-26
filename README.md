@@ -25,4 +25,7 @@ Here is short documentation for running the REST API that I have created:
      worker.php file. the emails won't sending to recepient, but only store in 'emails' loca table. to run the sending email, type 'php worker.php' in root folder using terminal.
   -  if you want to listing all emails from DB, send the 'List Emails' in your postman
 
-- if you want to see the queue messages, type 
+- if you want to see the queue messages, open terminal in root folder. type 'rabbitmq-plugins enable rabbitmq_management' and open 'http://localhost:15672/' in your browser. And for      user=guest, password=guest
+- open 'Queues and Streams' tab. Choose 'email-queue' in All Queues.
+- scroll down and click 'Get Messages' tab. Set how much data that you want to retrive in 'Messages' input form, for example type '10'. Then click 'Get Message(s)', it will show
+  queue json messages data
