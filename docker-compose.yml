@@ -1,0 +1,15 @@
+version: '3'
+services:
+  php-app:
+    build: .
+    ports:
+      - "8080:80"
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: Levart
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Akhdan123
