@@ -4,3 +4,7 @@ Thank you Levart.id for giving me the opportunity to continue the Technical Codi
 
 
 Here is short documentation for running the REST API that I have created:
+
+- clone this project to your local
+- open terminal in root folder, type 'composer install'
+- type 'cp .env.exampe .env' it will create the new .env file with my credentials. Or adjust the contents of the .env file with your local credentials.
