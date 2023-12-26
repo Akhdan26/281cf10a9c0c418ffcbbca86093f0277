@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "d25b8271-aa54-4940-b8a9-f455a945e77d",
+		"name": "Levart.id",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30037750"
+	},
+	"item": [
+		{
+			"name": "Send Email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "to",
+							"value": "akhdanhifzhan@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "subject",
+							"value": "Testing Send Email",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "halo ini email testing untuk tes levart.id",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/send-email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"send-email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Emails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"email"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "sd@gmail.com",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "CLIENT_ID",
+			"value": "0eb4df9d02d195da9a7f"
+		}
+	]
+}
