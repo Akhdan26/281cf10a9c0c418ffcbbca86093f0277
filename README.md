@@ -8,3 +8,11 @@ Here is short documentation for running the REST API that I have created:
 - clone this project to your local
 - open terminal in root folder, type 'composer install'
 - type 'cp .env.exampe .env' it will create the new .env file with my credentials. Or adjust the contents of the .env file with your local credentials.
+- open PG Admin, or use psql command. create new 'emails' table using this query :
+
+  
+- to run the api, you need to import the Levart.id.postman_collection.json to your Postman.
+- open terminal again in root folder, type 'php -S localhost:3000 -t public'. so it will running PHP local server in port:3000 getting index.php file in /public folder.
+- the REST API only for send email and listing all emails data from DB. so how this API works?
+  1. If we send new email, the emais data such (email_to, subject, and message) are store in PSQL DB. And set the new Queueing message json data in RabbitMQ. So if you don't run the   
+     worker.php file. the emails won't sending to recepient, but only store in PSQL DB.
